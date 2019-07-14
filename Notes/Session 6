@@ -1,0 +1,158 @@
+Session 6
+==========
+
+
+Trojans : Its a type of MALWARE jo user ko lgta hai uske fayde ke liye hai pr andrr hi andrr wo usko kahin na kahin se khokhla kr deta hai hai.
+It is a type of malware which at first seems to be a benficial thing for a person but it i basically harming the person at the backend at the background.
+It basically provide a backdoor access of any system without the concern of the system owner.
+
+
+
+Trojans can be differentiated on the basis of connections:
+
+1.Forward connection based trojans 
+2.Reverse connection based trojans
+
+
+
+1. Forward Connection
+---------------------
+	When the attacker have the target's IP Address, then he can directly attack the system.(saara khel Victims ki ip address ka hota hai)
+	1. Target keeps on moving --> IP Address of the target will keep on changing
+	2. It will be very very hard for an attacker to get the target's IP Address everytime, when he will change the location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Reverse Connection
+---------------------	
+	This is the current type of trojan that is implemented nowadays in which an attacker uses his/her IP address to launch an attack. Its not required to know the IP address of the victim. The trojan developed by hacker is send to the victim and further when executed by victim attacker gets the access.
+
+	Tools we use to make a trojan is a third party tool known as Remote Administrative Tool (RAT).
+	eg: Dark Comet 
+	    NjRAT 
+	    Nanocore etc...
+
+Note: The RAT's created from the above tools or from somewhere else could be implemented on internet and intranet but the procedure varies...
+INTRANET : when attacker and the victim are on the same network
+INTERNET : when attacker and the victims are in a different network (using DDNS and port forwarding).
+
+Dark Comet demo...
+
+
+Anti-Malware :
+================
+The softwares which are made to detect the malwares and preventing them from destroying the system. 
+Like : anti-virus or Web security 
+ 
+ How the Anti-malware programs work:
+ ------------------------------------
+They basically work on the basis of signatures and definitions .Every application created has its own signature so these anti malwares have a database of signatures(of trojans).So when they find a signature of application in the database they consider it to be a virus or trojan and simply remove it or ask for actions to implemented ...
+
+https://www.youtube.com/watch?v=bTU1jbVXlmM
+
+
+How to evade these Anti-Malware:
+---------------------------------
+To evade these anti malware we require softwares that are termed as binder and cryptors which help in modifying the signature making a new signature which is not present in thier database. So basically our target is to make a trojan or virus FUD( Fully UnDetectable).
+
+Cryptors are those applications which helps as a extra coating layer to an application providing there own self generated "Signatures".
+
+Binders are those application which bind the malware with any other file (that file which seems usefull to user but trojan is binded with it and will run in stealth mode).
+
+Some of these cryptors are : CHrome Crypter, Urge Crypter
+
+BOTNETS : roBOT in a NETwork 
+		   These are the devices that are effected by the trojans or virus which can be controlled by a single attacker and can be used for several attacks like DDOS...
+
+ROOTKITS : Rootkits are those Malicious Applications or Codes which are installed in the Boot option such as BIOS and start executing on every startup.
+
+-----------------------------------------
+SECURE SYSTEM CONFIGURATION
+===========================
+
+
+1. CMD > $ netstat -ona     
+(This will show all the Sockets : IP+Port Connections with their Stats of that particular machine)
+	= o stands for ports
+	= n stands for network IPs
+	= a stands for all connections and ports
+
+2.	CMD > tasklist
+	CMD > $ taskkill /PID ___ /F
+
+3. Startups Check and Maintaining the list of the Machine.
+
+4. Task Manager > Processes > kill PID (Process ID) of the Malicious Executable(exe)
+
+5. Checking Firewall status and making and creating new Rules Sets.  > Outbound Rules & Inbound Rules
+
+6. Services running on the Machine.
+
+
+https://lucideustech.blogspot.com/2018/02/tracing-and-terminating-reverse.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://pastebin.com/Gns8FrY5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

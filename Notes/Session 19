@@ -1,0 +1,167 @@
+Session 19
+============
+		What is wireless networks??
+-> Wireless networks are networks that are not connected to the cables or any such sort o things now the thing arrives why this technology came into existense as using such wireless networks enables companies to avoid costly process of introducing cables into building and making communication portable.It become quite messy to handle such wired communication whcih landed up to a solution of WI-FI (WIRELESS - FIDILITY).
+
+
+WIFI Alliance take care of such wireless issues and who certifies Wi-Fi products if they conform to certain standards of interoperability...
+
+For using these Wireless Networks, there is an standard which sets Rules and Regulations to use Wireless Networks for using Internet named as "IEEE 802.11"
+
+Free Wifi 
+==========
+Everybody goes on with free wifi like in Dominoes, Pizza hut, airports, railway station etc etc... 
+Connecting to such Wifi leads to
+--> MITM (Man In The Middle attack)
+--> DDOS (Distributed Denial of Service)
+--> Impersonation
+--> Data Theft and even Identity Theft
+
+Because of this free Wifi facility Hackers have started going with malicious activities so just because of this we require WIFI SECURITY.
+
+
+# In order to execute the WiFi smoothly several protocols were made but has been changed time to time because of security issues whic are listed below...
+
+WEP (Wired Equivalent Privacy)
+WPA (Wi-Fi Protected Access)
+WPA2 (Wi-Fi Protected Access 2)
+
+
+
+Wired Equivalent Privacy (WEP) was the first protection standard, introduced in 1997. By 2001, several serious weaknesses were identified so that today a WEP connection can be cracked within minutesThe main weakness of WEP is its use of static encryption keys. When you set up a router with a WEP encryption key, that key is used by every device on your network to encrypt every packet that’s transmitted.The WEP uses RC4 algorithm and DES standard.
+
+Wi-Fi Protected Access (WPA) :
+To overcome the consequenses of the attacks occuring in the WEP ,WPA was introduced.Like coming to WPA it basically works with two scenarios one is with the Enterprise and the other is with the personal. WPA uses the temporal key integrity protocol (TKIP), which dynamically changes the key that the systems use making it difficult for a hacker to decrypt the key.
+Now this TKIP works with the Personal one when it comes with the other scenario i.e. WPA-Enterprise the authentication was done in the server side using the service called RADIUS(Remote Authentication Dial In User Service) and this Radius uses a protocol named as EAP (Extensible Authentication Protocol).
+
+ Wi-Fi Protected Access2 (WPA2) :
+ As there were some difficulty in getting thing done with the WPA thing i.e. it was not having that much effective security and was not feasible for the normal person to get the RADIUS server implementation WPA2 was introduced.
+ This WPA2 basically uses 
+  |
+  |--> AES (Advanced Encryption Standard)
+  |    ==================================
+  |    # It is a symmetric block cipher chosen by the U.S. government to 	|    	protect classified information and is implemented in software and |		  hardware throughout the world to encrypt sensitive data.
+  |	   # It uses 128 bit blocks, using keys sized at 128, 192, and 256 	  |      bits. 
+  |
+  |--> DES (Data Enryption Standard)
+  |    ==============================
+  |    # DES is an implementation of a Feistel Cipher. It uses 16 round 	| 	   Feistel structure. 
+  |	   # The block size is 64-bit. key length is 64-bit.
+  |    # It has to go with 16 rounds of algorithmic function to get the 	|	   cipher text
+  |
+  |--> TKIP (Temporal Key Integrity Protocol)
+  |    =======================================
+  |    # TKIP was designed by the IEEE 802.11i task group and the Wi-Fi 	|	   Alliance as an interim solution to replace WEP without requiring  | 		the replacement of legacy hardware.
+  |
+  |--> PSK (Pre-Shared Key)
+  |    ====================
+  |    #Wi-Fi Protected Access Pre-Shared Key (WPA-PSK) is a security       |	  mechanism used to authenticate and validate users on a wireless LAN |		(WLAN) or Wi-Fi connection. It is a variation of the WPA security 	|	  protocol. WPA-PSK is also known as WPA2-PSK or WPA Personal. 
+  |
+  |--> CCMP
+  |    ====
+  |    # Counter mode Cipher block Chaining Message authentication code 	|	   Protocol.
+  |    # Mechanism for execution of cryptography for authentication.
+  |    # TKIP is now being obsolete and is replaced by the CCMP.
+  |    # The CCMP algorithm is based on the U.S. federal government's 		|	   Advanced Encryption Standard (AES).
+  |    # The Counter Mode component provides data privacy. The Cipher Block |	   Chaining Message Authentication Code component provides data 	  |	    integrity and authentication.
+  
+
+ 							 Four Way Handshake
+						   =======================
+
+				Router(AP)                 Client
+                   |						|  \      Beacons (Here you  
+                   |						|   }-->  see wireless network 
+                   | NOUNCE	(Broadcast)		|  /      available)
+                   |----->----->------>-----|
+                   |						|
+                   |						|
+                   |						|
+               /   |Reply of Nounce(unicast)|
+              /    |------<-----<------<----|
+Clicking on  /     |						|
+ a wifi     {      |						|
+Network     {      |						|
+             \     | Message of Auth.		|
+              \    |---->----->----->-------|
+               \   |		(Multicast) 	|
+                   |						|
+                   |						|
+                   |						|
+                   |						|
+                   |Acknowledgment of 		| ---> KEY + Passphrase
+                   |------<-----<------<----|     # here Passphrase is the
+                   |Authentication (Unicast)|       password which user 
+                   |						|       basically inputs
+                   |						|       and key is something 
+                   |						|       which gets attached 
+                   |						|       and is generally 									 complex,so in order to 								 make it user friendly 									 we only have to put 									 Passphrase
+                   						
+
+
+
+The main thing which needs to be pointed out or need to be notice is what happen when we are an authenticated user then what is the scenario which happen during a connection ??
+Whether it is again going with the four way handshake or just going with something else...
+
+
+
+CAPTURING WIRELESS COMMUNICATION PACKETS
+==========================================
+
+Attacker’s Machine - Kali OS
+Device Used -  Leoxsys External WIFI Adapter (LEO-HG150N)
+Tool - Airmon-ng , Airodump-ng (Non-Graphical)
+
+
+Modes of Using a Wireless Adapter :
+
+# Standard Mode : The mode which basically used by everyone to manage and 					use the services of a particular Access Point.
+# Monitoring Mode : The mode which allows a system with a wireless network 					   interface controller to monitor all traffic received 					from the wireless network. 
+
+Command: iwconfig --> to check which mode that wifi adapter is working on
+
+
+Tools we will be encountering are :
+
+* Airmon-ng : A tool which converts our wireless card into a promiscuous 			   mode wireless card. Yes, that means that our wireless card 				  will hookup with anyone !
+			  Well, that's almost correct. When our network card is in promiscuous mode, it means that it can see and receive all network traffic. Generally, network cards will only receive packets intended for them (as determined by the MAC address of the NIC), but with airmon-ng, it will receive all wireless traffic intended for us or not.
+
+			  Commands:
+			  # iwconfig
+			  # airmon-ng start wlan0
+			  # kill PID (those which might create problem)
+
+
+* Airodump-ng : A tool which enables us to capture packets of our 						specification.This will show us some more information 					about a perticular wireless network. So lets discuss with 				  some of the keywords.
+              
+              Commands:
+              # airodump-ng wlan0mon
+              #
+
+
+Terminologies
+==============
+Beacons : Number of beacons sent by the AP. Each access point sends about 			ten beacons per second at the lowest rate (1M), so they can 			  usually be picked up from very far.
+
+#Data  : Number  of  captured  data packets, including data broadcast packets.
+
+#s : Number of data packets per second measure over the last 10 seconds.
+
+CH : Channel number (taken from beacon packets). Note: sometimes packets  from  other  channels are captured even if airodump-ng is not 			 hopping, because of radio interference.
+
+MB : Maximum  speed supported by the AP.
+
+ENC : Encryption  algorithm  in  use. OPN = no encryption,"WEP?" = WEP or higher (not enough data to choose between WEP and WPA/WPA2), WEP (without the  question  mark)  indicates static or dynamic WEP, and WPA or WPA2 if TKIP or CCMP or MGT is present.
+
+CIPHER : The  cipher  detected.  One of CCMP, WRAP, TKIP, WEP, WEP40, or WEP104. Not mandatory, but TKIP is typically used with WPA and CCMP is typically used  with  WPA2. 
+
+AUTH  : The authentication protocol used. One of MGT (WPA/WPA2 using a separate authentication server), SKA (shared key for WEP), PSK (pre-shared key for WPA/WPA2).
+
+WPS  :  This is only displayed when --wps (or -W) is specified. If the AP  supports  WPS,  the first  field of the column indicates version supported.
+
+ESSID : THe MAC / Physical Address of the Access Point.
+
+BSSID : Name of the Access Point.
+
+
+

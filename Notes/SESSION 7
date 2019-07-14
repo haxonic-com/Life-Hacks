@@ -1,0 +1,288 @@
+                            SESSION 7
+
+WEB ARCHITECTURE AND COMPONENTS
+===============================
+
+1. Domain Name : Its tough for a user to remember the IP address of a website so these websites are assigned with a domain name such as google.com , facebook.com etc etc. So in order to open or access the website one has to visit the domain name.
+
+2. Web Hosting Space : The space which helps in storing the webpages or scripts which helps in running a website are known as hosting spaces. Eg. GoDaddy, BigRock 
+ICANN provide these hosting spaces to Godaddy etc.
+
+3. Operating Systems : On which Operating System we want to build our website. Eg. Linux, Windows
+
+4. Server Type : Which type of server we are using to host our website. Request and Response of the application.
+		Windows - IIS - Information Server
+		Linux - Apache Tomcat 
+
+5. Web Technology :   The technology we use in buliding a  website like the programming languages, the plugins, various scripting languages etc.
+To check what technology a site is using :
+Visit : builtwith.com
+
+	1. Client Side Scripting Language : Which is used to develop the Front End Application and the user only accessing the control menu of that Programming Language. 
+	Eg. HTML , Java etc.
+
+	2. Server Side Scripting Language : THese are those languages which are used for creating and maintaing server side configuration of a website.
+	Eg. PHP, ASP, JSP, PYTHON etc.
+
+Server is OS which always responds to the requests of clients.
+Clients are those which only requests to the server. 
+
+6. Database : Database is that system which stores all the data of a web application we are hosting in a server. It is known as the backbone of the web application.This data could be anything like username ,password , messages , comments etc.
+It helps in storing all the files situated in a database.
+Windows - MSSQL
+Linux - MySQL, PostgreSQL
+
+                        S Q L
+          Structured --> Means a uniform storage like in the form of tables
+          Query --> The data stored in the table can be retreived through some queries these queries could be like :
+          Select * from <tablename>;
+-------------------------------------------------------------------
+
+Local Hosting
+=============
+Local Hosting is a technology in which we stores and hosts a Database in our "localhost" Computer. This website can be hosted and accessed in a LAN or a Intranet Network.
+Can be assessed from the hosted computer by three ways:
+1. 127.0.0.1/WEBSITE_NAME
+2. localhost/WEBSITE_NAME
+3. <private ip>/WEBSITE_NAME
+
+
+LOCAL HOST SERVERS
+==================
+So, they are Server applications which makes our normal operating system and make them act like a server.
+
+WINDOWS - WAMPP
+
+W 	-	WINDOWS
+A   -	APACHE
+M   -	MSSQL
+P   -	PERL
+P   -	PYTHON
+
+LINUX - LAMMP
+
+L   -	LINUX
+A   -	APACHE
+M   -	MYSQL
+P   -	PERL
+P   -	PYTHON
+
+XAMPP - Cross Platform Server
+X 	-	Cross Platform
+A   -	APACHE
+M   -	MYSQL
+P   -	PERL
+P   -	PYTHON
+
+
+XAMMP installation and configuration demo...
+
+
+= Start apache
+= Start MySQL
+
+There are 3 ways for opening a server hosted file
+c:\xampp\htdocs
+------------------------------------------------------------------
+
+WEB SECURITY MISCONCEPTIONS
+===========================
+
+HTTP / HTTPS - SSL Secured = Secure Socket Layer
+							Encryption
+							Tunneling
+							Secure Socket
+
+= If a Website is using https instead of http, its not secured either. 
+= If I am using a Good Firewall than I am secured.
+= If I am using IDS and IPS the I am secured.
+	IDS = Intrusion(any obstruction) Detection System
+	IPS = Intrusion Prevesion System
+------------------------------------------------------------------
+
+
+SCRIPTING LANGUAGES
+===================
+
+Methods used in Scripting Languages
+===================================
+
+1. GET = It shows Data which is being traveled from Server to Clients in the URL only. It is the unsecured method of data travelling between client and server.
+
+2. POST = It doesn't show anything in the URL that fromwhere that data is travelling.
+
+
+
+
+Client Side Scrippting
+======================
+The scripting programming language we are gonna be using is HTML.
+
+HTML --> Hyper text markup language
+====
+Hyper Text Transfer Protocol
+  ||
+Hyperlinks
+
+
+This is the application used for creating client side web pages.
+
+HTML PRACTICALS
+================
+
+1. Starting of html scripting
+<html>
+...	
+...                         Tell me the code written is in HTML
+...
+</html>
+
+<head>
+..
+..                          It is used to define the header like title of the web 									page,name in the tab
+</head>
+
+<title> ......
+Name of the Title
+...</title>
+
+<body>
+...
+...                         Used for the content of the web page
+...
+</body>
+
+5. Heading = Used to provide the heading
+<h1> - <h6>
+As the number increases the font size decreases.
+<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+
+
+HTML TAGS
+=========
+
+<p> = Paragraph
+<br> = Break Statement
+<ul> = Helps in indentation
+<ahref> = Hyperlink Reference
+<b> = Bold
+<btn> = Button
+<a> = Action
+<li> = Line
+<h1> = Heading
+<imgsrc> = Image Source
+<form action> =  Form Clicking Action
+
+
+Basicpage.html
+==============
+<html>
+<head>
+<title>Basic</title>
+</head>
+<body>
+<a href="http://www.lucideus.com"><h1>Ethical Hacking</h1></a>
+<h2>Black Hat Hacker</h2>
+<p>These are the bad guys.<br>
+They Just Work For money.<br>
+They bring chaos to the cyber world.<br>
+Very Very Bad guys.</p>
+<h2>White Hat Hacker</h2>
+<h3>Script Kiddies</h3>
+<h3>N00bZ</h3>
+<img src="pooh.jpg">
+<form action="secpage.html">
+First Name: <input type="text"><br>
+Last Name : <input type="text"><br>
+Username  : <input type="text"><br>
+Password  : <input type="password"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+=============
+Secpage.html
+=============
+<html>
+<head>
+<title>Welcome</title>
+</head>
+<body>
+<h1>Hello user, you are welcome to my web site</h1>
+</body>
+</html>
+
+
+
+
+** NOTE : Its not neccessary to close the tags i.e. </html> or </body>
+  the browser will automatically close it during its running state.
+-------------------------------------------------------------------------------------
+
+Server Side Scripting
+=====================
+
+This language is only used to maintain and coonfigure Server Side Scripting. eg. PHP
+
+
+
+PHP
+===
+<?php = Showing the starting of a php code
+?>    = It is the end of the php code
+$     = to create a variable
+ 
+variable is a datatype in which we are stroring a value.
+    $number = It is a variable and I can store anything in it.
+    For Printing = "echo"
+    echo "Welcome to Lucideus"
+   
+-----------------------------------------------------------------------------------------
+
+Program of Addition of two numbers Through PHP and HTML
+=======================================================
+
+HTML CODE = hello.html
+
+<html>
+<head>
+  <title>Hello</title>
+</head>
+<body>
+  <form action=calc.php method="post">
+    First Number <input type="text" name="first" id="first"><br>
+    Sec Number <input type="text" name="sec" id="sec"><br>
+    <input type="submit">
+  </form>
+</body>
+</html>
+
+PHP CODE = calc.php
+
+<html>
+<head>
+  <title>add</title>
+</head>
+
+<body>
+  <?php
+$one = $_POST['first'] + 0;
+$two = $_POST['sec'] + 0;
+$sum = $one + $two;
+echo "The sum is";
+echo $sum;
+ ?>
+</body>
+</html>
+
+----------------------------------------------------------------------
+
+
+Task: 
+1.Create a calculator with the help of HTML and PHP
+
+useful link: W3School.com
+             hackertest.net

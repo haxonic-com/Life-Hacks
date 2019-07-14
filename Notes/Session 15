@@ -1,0 +1,159 @@
+Session 15
+===========
+
+
+Introduction to Javascript
+=========------=============
+JavaScript is a widely used web-based programming language that powers the dynamic behavior on most websites, like suppose if you visit gmail you will notice only the mailbox part refreshes and the other part remains as it is that means only some part of the website is interactive.Similar case is with websites like Facebook just place the cursor in a hyperlink you will see an information this is all because of javascript. This programmming language was created by Netscape.
+
+
+Difference between JAVA and JAVASCRIPT :
+
+Java is a software programming language. But, Javascript is meant for development of Web Applications which is generally used in front end developing.
+
+------------------------X-X-X-X-X-X-X-X-X-X-X-X-X-X-------------------------
+
+Several functions are used in javascript to ease the work like:
+
+alert()
+prompt()
+document.write
+document.cookie
+getElementById
+
+These functions are termed to be the payloads which if run in any website will give us some juicy information.
+
+Syntax Of Javascripts
+======================
+
+<script>  =  Starting Tag
+
+</script> =  Ending Tag
+
+<script>
+.
+.
+</script>
+
+
+A Javascript based program:
+=============================
+
+
+
+<html>
+<head>
+<title>Java Script</title>
+</head>
+<body>
+<script>
+alert("Hacked");
+</script>
+</body>
+</html>
+
+2 Number Addition
+=================
+html>
+<head>
+<title>Java Script</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<form>
+First Number :<input type="text" id="one"><br>
+Second Number:<input type="text" id="two"><br>
+<button onclick="addition()">Add</button>
+</form>
+</body>
+
+<script>
+function addition()
+{
+var onee = document.getElementById("one").value;
+var twoo = document.getElementById("two").value;
+var sum= +onee + +twoo;
+alert(sum);
+document.write(sum);
+}
+</script>
+
+</html>
+
+
+
+XSS (Cross Site Scripting)
+===========================
+
+
+	In which the web application or the web site executes the html tags as the normal input and displays the data as that using htmls tags.
+
+	In this type of attack attacker can make the target to do what ever he wants to do. An attacker can craft a link and send it to the target, when the target will open the crafter link, then the malicious work of the attacker is carried out.
+
+There are three types of XSS
+----------------------------
+1. Reflected XSS
+2. Stored XSS
+3. DOM Based XSS
+
+1. Reflected XSS
+================
+	In this type of xss, the attacker can attack a person one time using the crafted link. The attacker can inject the web application just once, then the malicious query will get away.
+
+	<h1>heading</h1>
+	<script>alert("hacked")</script>
+	<script>alert(document.cookie)</script>
+	<iframe src="http://www.lucideus.com"></iframe>
+
+	<script>alert("hacked")</script>
+	<>alert("hacked")</script>
+
+Bypass
+======
+	<script> ---> remove
+
+	<script type="text/javascript">alert("hacked")</script>
+	<ScRiPt>alert("hacked")</script>
+	<scr<script>ipt>alert("hacked")</script>
+			<scr<script>ipt>
+				<script>
+
+2. Stored XSS
+=============
+	An attacker inputs the malicious javascript code into the entry point, and that malicious code is stored in the database. So whenever a user will go to that site of the web application, he will be a target of XSS. This malicious code will remain there in the database until and unless the database administrator does not remove it manually or resets the database.
+
+	Where We can try for stored XSS
+	===============================
+		1. Comments
+		2. Messages
+		3. FAQ
+		4. Form
+		5. RSS Feedback
+
+3. DOM Based XSS
+================
+	Documentary Object Model
+	In this type of xss, our data is not send to the server, but it is updated dynamically.
+	There are 3 entities which are vulnerable in DOM Based XSS
+		1. document.url
+		2. document.location
+		3. document.referal
+
+	DOM Based XSS (or as it is called in some texts, “type-0 XSS”) is an XSS attack wherein the attack payload is executed as a result of modifying the DOM “environment” in the victim’s browser used by the original client side script, so that the client side code runs in an “unexpected” manner. That is, the page itself (the HTTP response that is) does not change, but the client side code contained in the page executes differently due to the malicious modifications that have occurred in the DOM environment.
+
+	https://lucideustech.blogspot.com/2018/03/a-practical-guide-to-dom-based-xss.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

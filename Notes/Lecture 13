@@ -1,0 +1,93 @@
+				Lecture 13
+
+Time Based SQL Injection:
+
+Sometimes the attacker might not be able to identify the query execution success, because the server/application doesn’t show any error.
+One of the techniques to get an indication for the query execution success called Time-Based Blind SQL Injection.
+ 
+With this technique, the attacker executes functions that take some time to finish (for example: Sleep, Delay, etc.). By measuring the time took the application to response, the attacker might be able to identify if the query executed successfully or the query execution failed.
+
+Function we will be using 
+SLEEP : SLEEP(time) <-- syntax
+Only available since MySQL 5. It takes a number of seconds to wait in parameter.
+MID(string, start, length)
+
+Condition we will be using
+IF(condition, when_true, when_false)
+Only valid when using in SQL statement. 
+
+
+
+
+Commands to Execute:
+		 1' -sleep(10)#
+1' -if(mid(version(),1,1)='5',sleep(3),0)#
+		 1' -if(mid(version(),1,1)='8',sleep(3),0)#
+		 1' -if(mid(version(),1,1)='1',sleep(3),0)#
+
+prabhankar 
+if(mid(prabhankar,1,3)='pra',sleep(3),0)
+
+
+Post Parameter
+================ 
+
+
+get method :
+
+www.pagalpanti.com/dhjasdh?something=something
+
+
+post method:
+Data is taken from the website towards the web server in a hidden mode nothing is displayed in url.
+For that we use the technique called as data tampering 
+
+
+
+
+Arbitrary File Upload:
+Arbitrary File or Shell File
+============================
+ 
+Code in php or asp
+ 
+coded by hacker or programmer, in such a way that w hen this file got uploaded in some Website by any how and got executed, it will provide us complete access of the server
+ 
+Upload :
+ 
+Resume
+Video
+Image
+Signatue
+ 
+etc
+ privshell.com
+Shells:
+ 
+Windows: c99.asp/php b374k.php kikocaca.asp
+ 
+Linux: wso.php
+
+
+
+Admin Control Panel
+Add some product
+Pricess
+add comment
+add pages/edit
+ 
+ 
+Hacker Panel: Shell
+All controls
+Download Web Page
+Edit Web Page
+Delete
+
+
+
+MY POC on hostinger
+
+
+H
+
+

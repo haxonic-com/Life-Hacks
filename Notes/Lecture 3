@@ -1,0 +1,321 @@
+			               Lecture 3 
+
+Types of Network 
+===================
+
+
+
+PAN (Personal Area Network): A network covering a very small area, usually a small room. The best known wireless PAN network technology is Bluetooth.
+
+
+LAN (Local Area Network): It covers the Local area. This usually includes a local office and they're also pretty common in homes now, thanks to the spread of Wi-Fi. 
+Like Lucideus office.
+
+MAN (Metropolitan Area Network) :A metropolitan area network (MAN) is similar to a local area network (LAN) but spans an entire city or campus. MANs are formed by connecting multiple LANs. Thus, MANs are larger than LANs but smaller than wide area networks (WAN). 
+Delhi as a whole can be considered as MAN. 
+
+WAN (Wide Area Network) : A network that covers an area wider than a LAN.Distances can range from a network connecting multiple buildings on a corporate or college campus to satellite links connecting offices in different countries.
+Our Intenet the articles or browsing we do is a WAN based network.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PORTS
+======
+
+Ports are the doors from where data comes and goes out of any device connected to a network can be LAN MAN or WAN.
+
+Types of Ports
+---------------
+Physical Ports : They are tangible in nature. i.e we can see touch and feel the ports, and as its nature data comes and goes out from these ports.
+
+For Example: USB Ports, LAN, HDMI, VGA etc etc.
+
+
+Virtual Ports : There are total 65535 ports avialable as it clear from the virtual they non tangible ports which you can see and feel but cant touch.
+For Example: Ports 80,8080 for HTTP : data comes and goes from client to server.
+Some well known ports:
+
+
+prabhankar > +1 > bciol
+
+cvbcvdfgdf 
+
+
+--------------------------------------------
+        Port         |       Name
+         21          | File Transfer Protocol (FTP)
+         22          | Secured shell (Ssh)
+         23          | Telnet
+         25          | SMTP
+         80          | HyperText Transfer Protocol (http)       |
+
+ * ssh+FTP= SFTP (22)
+
+Registered Ports: 
+The registered port numbers are the port numbers that companies and other users register with the Internet Corporation for Assigned Names and Numbers (ICANN) for use by the applications that communicate using the Internet's Transmission Control Protocol (TCP) or the User Datagram Protocol (UDP).
+
+The registered port numbers are in the range from 1024 through 49151.
+
+Dynamic Ports:
+Besides the well-known port numbers and the registered port numbers, the remaining ports in the port number spectrum are referred to as dynamic ports or private ports and are numbered from 49152 through 65535.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Proxy or Proxy Servers:
+==========================
+A proxy server is basically another computer which serves as a hub through which internet requests are processed. By connecting through one of these servers, your computer sends your requests to the server which then processes your request and returns what you were wanting.
+OR 
+A proxy server is a computer that acts as a gateway between a local network and a larger-scale network such as the Internet.
+Proxy servers provide increased performance and security.
+
+Example: www.hidemyass.com
+         proxy-list.org
+
+Extension :Anonymox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VPN(Virtual Private Network)
+===============================
+A virtual private network, or VPN, extends across a public or shared network, and acts like a tunnel so you can exchange data securely and anonymously across the internet as if you were connected directly to a private network.
+
+Once you connect through a VPN, all your traffic becomes encrypted and your IP (Internet Protocol) address gets replaced with the address of the VPN server. 
+
+pick a quality VPN benefit that does not store information or interchanges logs.
+
+
+Eg: Vpngates.com
+    open VPN 
+
+
+Services:
+Online Services : hidemyass
+extension based : hoxx vpn, Anonymox
+Stand Alone Services : Psiphon 
+
+
+
+
+
+DNS (Domain Name System)
+==========================
+The Domain Name System (DNS) is the phonebook of the Internet. 
+google.com--> 121.123.23.212 
+
+Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.
+
+
+
+How DNS works:
+https://www.youtube.com/watch?v=2ZUxoi7YNgs
+
+
+OSI Layer
+============
+7 Layers:
+ 
+Sender                                  Receiver
+=======                                 ========
+ 
+7. Application Layer                7. Application Layer
+ 
+6. Presentation Layer               6. Presentation Layer
+ 
+5. Session Layer                    5. Session Layer
+ 
+4. Transport Layer                  4. Transport Layer
+ 
+3. Network Layer                    3. Network Layer
+ 
+2. Data Link Layer                  2. Data Link Layer
+ 
+1. Physical Layer                   1. Physical Layer
+       | 								                 ^
+       |                                 |
+       |------------->---->----->--------|
+
+
+Application Layer: All applications and utilities that communicate with network fall in this layer.
+Like your Browser...
+
+Presentation Layer:
+This layer is usually part of an operating system (OS) and converts incoming and outgoing data from one presentation format to another -- for example, from clear text to encrypted text at one end and back to clear text at the other.
+
+Session Layer:
+This layer sets up, coordinates and terminates conversations. Its services include authentication and reconnection after an interruption.
+
+Transport Layer:
+This layer manages packetization of data, then the delivery of the packets, including checking for errors in the data once it arrives.    (TCP AND UDP)
+-->Segmentation
+-->Connection management
+-->Reliable and unreliable data delivery
+-->Flow control
+-->Connection multiplexing
+
+
+he ll o  th is is pr ab ha nk ar
+
+Network Layer:
+This layer handles addressing and routing the data -- sending it in the right direction to the right destination on outgoing transmissions and receiving incoming transmissions at the packet level.
+Network layer is responsible for providing logical address known as IP address. Router works on this layer. Main functions of this layer are following:-
+-->Define IP address
+-->Find routes based on IP address to reach its destination
+
+Data link Layer: 
+It forms frames from the packets that are received from network layer and gives it to physical layer.Outgoing messages are assembled into frames.
+--> Defining the Media Access Control (MAC) or hardware addresses
+--> Defining the physical or hardware topology for connections
+--> Defining how the network layer protocol is encapsulated in the data link layer frame
+
+
+Physical Layer:
+All the transmission of data in a network is done in 0 and 1 so that converion is done over here .
+
+
+TCP/IP Model:
+===============
+4 layers
+ 
+Sender                                  Receiver
+=======                                 ========
+ 
+4. Application Layer                4. Application Layer
+ 
+3. Transport Layer                  3. Transport Layer
+ 
+2. Internet Layer                   2. Internet Layer
+ 
+1. Network Interface                 1. Network Interface 
+
+
+
+OSI -    protocol independent,TL guarantees delivery of packets
+TCP/IP - based on standard protocol,TL does not
+
+
+
+
+
+
+Web Technology Basics
+=======================
+Domain Name
+Hosting Spaces
+Server
+Client 
+Backend (Database)
+Front end
+Browsers
+
+
+
+
+https://pastebin.com/zF108dsm
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

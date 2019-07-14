@@ -1,0 +1,640 @@
+      
+
+							Lecture 1:
+
+
+INFORMATION SECURITY
+=====================
+
+DATA | INFORMATION
+
+Data : Raw Facts
+Information : Processed data or collection of data
+
+Information Security : Covering up all the security aspects related to Information Technology.
+------------------------------------------------------------------------------------------
+
+CIA TRIAD
+==========
+
+1. CONFIDENTIALITY - That the data which is confidential and private should be secured from bad people.eg. - Aadhar Cards, Financial Records etc.
+
+2. INTEGRITY - Dis-manipulation of data which should be secured from others. - accuracy. eg. chainging of any sensitive personal document.
+
+3. AVAILABILITY - Availability simply means that some data should be available to specific persons onbly having access rights.
+
+
+
+
+ETHICAL HACKING / CYBER SECURITY
+=================================
+
+Ethical - Means legal practices which should be performed.
+
+Hacking - Hacking means accessing any data, information or any system with the permission of individual.
+
+Hackers - Hackers are the most skilled and technical people who are profiecient in understanding the technical aspects.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+TYPES OF HACKERS
+=================
+
+1. BLACK HAT HACKERS - THese are the bad people who access and gain resources of any individual for the sake of there own wealth. Parents wala person, 
+usually comes in newspaper Eg. Shadow Brokers 
+
+2. WHITE HAT HACKERS - THese are those people who gains access and tamper the resource for the sake of the individual. eg: Rahul Tyagi, Abhijeet Singh, Sanjeev Multani ,Prabhankar Tripathi etc.
+
+3. GREY HAT HACKERS - These are those hackers who hacks and gains resources for the sake of the society and culture.
+Eg. Anonymous, Edward Snowden etc.
+
+----------------------------------------------------------------------
+
+Other Categories
+================
+
+1. Script Kiddies - These are those people who steals the programs, ideas or any other method of hacking and perform hacks without any knoweledge.
+
+2. Noobz - These are the new born technical babies who just arrived in the field of cyber security.
+
+3. Crackers - These are those people who are good in cracking into a particular machine or a authentication check ,they crack into systems for a malicious purpose. 
+
+
+
+
+
+
+
+
+
+TYPES OF INFORMATION
+====================
+
+1. Confidentials INformation - Aadhar Cards, Passwords, Birth Certificates, PAN Cards etc.
+
+2. Financial Information -  Financial Statements, Bank Details, Login Credentials for 								banking practices etc.
+
+3. Health Information   - Policies, Diseases etc.
+
+4. Personal Information - Address, Phone Numbers, DOBs etc.
+----------------------------------------------------------------------
+
+
+
+Ques: Why people hack ya fr kya motive hota hai logo ka hacking me indulge hone ka ?
+
+1.Hobby
+2.Defame (Revenge)
+3.Stealing information
+4.Leaking information
+5.Political motives
+6.For SECURTIY REASONS i.e. securing digital space :)
+
+
+
+
+
+
+Cyber Terrorism
+=================
+Terrorist have found a new way for indulging into disruptive activities through digital space.Jitta hm log technology ka use kr rhe hai waise hi sath hi saath iska koi na koi misuse bhi kr rha hai.
+Email conversation ---> telephonic conversation --> gaming platform.
+cyber terrorism means to damage information, computer systems and data that result in harm against non-combatant targets.
+
+CASE 26/11 ---> NATGrid formation
+
+
+
+
+***___Cyber Laws___***
+
+
+
+
+** Section 43:
+ Penalty and compensation for damage to computer and computer system.
+
+** Section 65:Tempering with computer source Documents.
+ Changing and altering the documents which are available.
+ Imprisonment upto 3 years and Fine upto 200,000 INR.
+
+** Section 66:  Computer Related Offences.
+
+SECTION 66 A - Punishment for sending offensive messages through communication service.
+Imprisonment upto 3 years and Fine upto 100,000 INR or both.
+
+
+SECTION 66 B - Dishonestly receiving and retaining any stolen computer resource or communication device is also made punishable by amendment. 
+Imprisonment upto 3 years and Fine upto 100,000 INR or both.
+
+
+
+SECTION 66 C - Identity Theft (Driving license, adhar card etc)
+Imprisonment upto 3 years and Fine upto 100,000 INR or both.
+
+SECTION 66 D - Cheating by Personation by using computer resource or communication device. (telecallers)
+Imprisonment upto 3 years and Fine upto 100,000 INR or both.
+
+SECTION 66 E - Violation of Privacy
+Imprisonment upto 3 years and Fine upto 200,000 INR or both.
+
+
+
+
+
+
+
+
+
+
+
+SECTION 66 F - Punishment to cyber terrorism
+Data or computer database so obtained may be used to cause or likely to cause injury to the interests of the sovereignty and integrity of India, the security of the State, friendly relations with foreign States, public order, decency or morality, or in relation to contempt of court, defamation or incitement to an offence, or to the advantage of any foreign nation, group of individuals or otherwise, commits the offence of cyber terrorism. 
+
+** Section 67:  Punishment for publishing or transmitting obscene material in electronic from.
+
+** Section 71:  Penalty for misrepresentation.
+ If you have uploaded your ID card, and given the wrong name and address,then again it is a crime.
+ Imprisonment to Two years, or with fine of 1,00,000 INR, or with both.
+
+** Section 72: Breaching of Confidentiality and Privacy
+ I have some personal stuff in my hard disk drive and on google drive, If someone any how gets the access of those files without my permission, Then again it is a crime.
+ Right To Privacy.
+ Imprisonment for Ten Years, or with fine, or with both. 
+
+** Section 73:Penalty for publishing electronic signature certificate false in certain particular.Signature Forgery.
+
+Imprisonment for upto two years, or with fine upto 1,00,000 INR, or with both. 
+
+
+
+
+
+
+TASKS :
+follow theHackernews.com
+		edward snowden (Snowden)
+		Kevin MIttnick (TAKEDOWN)
+		Parissa tabriz 
+
+Helpful link : https://lucideustech.blogspot.com/2018/02/a-basic-guide-to-indian-it-amendment.html
+
+
+
+
+=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x==x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
+
+
+           Lecture 2
+Introduction to Networks
+------------------------
+
+Network: Interconnetion of two or more devices with each other for a common purpose i.e sharing which can be peripheral devices or can either be any information.
+Types:
+Intranet
+Internet
+
+
+
+
+How you get connected to the network ?
+NIC (Network Interface Card)
+
+
+
+
+
+
+
+
+Network Topologies (Arrangement)
+--------------------
+o Bus Topology  : single transmission channel 
+o Star Topology : one central node
+o Ring Topology : Forming a ring sturcture with no central 							                  dependency
+o Mesh Topology : Every node is connected to every other node present in a network
+o Hybrid Topology : Mixture of the above topologies.
+
+
+● Network Protocols (Network me kadam rakhne ke liye kch rules follow krne hote ha unko network protocol kehte hai): To implement smooth transfer of data to anfd fro the network one needs to follow these protocols.
+-----------------------
+o IP : The Internet Protocol (IP) is the method or protocol by which data is sent from one 		   computer to another on the Internet. 
+
+o HTTP (HyperText Transfer Protocol ) : Protocol defines how messages are formatted and transmitted, it is the foundation of any data exchange in WWW (80).
+
+
+
+
+
+o FTP: To transfer files over the network. 
+           (In intranet accessed ftp://ip ) [21]
+
+o SMTP (Simple Mail Transfer protocol):  To transfer mail properly 25,366
+
+o VoIP : Voice over Internet Protocol is a category of hardware and software that enables 			 people to use the Internet as the transmission medium for telephone calls by      			 sending voice data in packets using IP (5060 and 5061)
+
+
+o DHCP : Automatic assignment of IP
+(dynamic host configuration protocol)
+
+o TCP : handshaking , connection-oriented, reliable, slow
+Transmission control Protocol: examples:
+
+
+o UDP  (USER DATAGRAM PROTOCOL): no hanshake, connection less, not reliable, fast, video streamng 
+
+ipconfig
+
+There are two types of address : 
+Virtual address : your IP address which might change fromm place to place
+physical address : Which will remain constant throughout like your MAC address.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+o Types of IP
+▪ Internal | Private | Local
+--> ipconfig
+--> ifconfig
+▪ External | Public | Global
+--> myipaddress
+--> ipcow.com
+--> ipchicken.com
+
+
+
+IPV4 VS IPV6
+================
+IPv4 uses a 32-bit address scheme allowing for a total of 2^32 addresses (just over 4 billion addresses)
+IPv6 addresses are 128-bit IP address written in hexadecimal and separated by colons. 
+
+172.16.149.1
+
+00000000.00000000.00000000.00000000 = 32 bit
+
+
+
+             2^2     2^1      2^0
+0       	    0	 	    0	    	0			000 
+1			        0       0       1			001
+2			        0       1       0   	010	
+3             0       1       1			011
+4			        1       0       0			100
+5             1       0       1     101
+6             1       1       0     110
+7             1       1       1     111
+
+
+
+192 = 11000000
+168 = 10101000
+ 
+ 
+                  128     64       32     16    8     4      2      1
+          192=     1       1       0      0     0     0     0     0  
+          168=     1       0       1      0     1     0     0     0
+
+Subnetting
+
+192.168.0.1/23
+
+11000000.10101000.00000000.00000001
+
+
+IP Classes in decimal notation
+Class A addresses range from 1-126    --     255.0.0.0       126.0.0.0 
+Class B addresses range from 128-191  --- 255.255.0.0
+Class C addresses range from 192-223  --- 255.255.255.0
+Class D addresses range from 224-239
+Class E addresses range from 240-254
+
+127.0.0.1--> loopback address
+
+00000000.00000000.00000000.00000000 --- 11111111.11111111.11111111.11111111
+			                0.0.0.0 --- 255.255.255.255
+
+
+
+Class A: 255.0.0.0  (2^N-2) HOSTS 
+         --- -----
+         NI    HI
+Class B: 255.255.0.0
+Class C: 255.255.255.0
+
+
+
+172.16.0.1 - 172.16.0.255 ----> 
+172.16.1.0 - 172.16.1.255 ----> 
+172.16.2.0 - 172.16.2.255 ---->
+
+
+172.16.0.54 
+
+
+
+
+
+
+NAT - Network Address Translation
+==================================
+ 
+This is a function which converts my Public IP Address to my Private IP Address and vice versa.
+
+
+
+
+172.168.10.0 - 172.168.10.255
+172.168.11.0 - 172.168.11.255 
+
+TASKS: 
+IPV5
+
+
+=x=x=x=x=x=x==x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x==x=x=x=x=x=x=x=x=x=x=x=		
+
+
+           						Lecture 3 
+
+Types of Network 
+===================
+PAN (Personal Area Network): A network covering a very small area, usually a small room. The best known wireless PAN network technology is Bluetooth.
+
+
+LAN (Local Area Network): It covers the Local area. This usually includes a local office and they're also pretty common in homes now, thanks to the spread of Wi-Fi. 
+Like Lucideus office.
+
+MAN (Metropolitan Area Network) :A metropolitan area network (MAN) is similar to a local area network (LAN) but spans an entire city or campus. MANs are formed by connecting multiple LANs. Thus, MANs are larger than LANs but smaller than wide area networks (WAN). 
+Delhi as a whole can be considered as MAN. 
+
+WAN (Wide Area Network) : A network that covers an area wider than a LAN.Distances can range from a network connecting multiple buildings on a corporate or college campus to satellite links connecting offices in different countries.
+Our Intenet the articles or browsing we do is a WAN based network.
+
+
+
+
+
+
+
+
+
+
+PORTS
+======
+
+Ports are the doors from where data comes and goes out of any device connected to a network can be LAN MAN or Wan.
+
+Types of Ports
+---------------
+Physical Ports : They are tangible in nature. i.e we can see touch and feel the ports, and as its nature data comes and goes out from these ports.
+
+For Example: USB Ports, LAN, HDMI VGA etc etc.
+
+
+Virtual Ports : There are total 0-65535 ports avialable as it clear from the virtual they non tangible ports which you can see and feel but cant touch.
+For Example: Ports 80,8080 for HTTP : data comes and goes from client to server.
+Some well known ports:
+
+--------------------------------------------
+        Port         |       Name
+         21          | File Transfer Protocol (FTP)
+         22          | Secured shell (Ssh)
+         23          | Telnet
+         25          | SMTP
+         80          | HyperText Transfer Protocol (http)       |
+         443	       | HTTPS (http over ssl)
+
+ * ssh+FTP= SFTP (22)
+
+Registered Ports: 
+The registered port numbers are the port numbers that companies and other users register with the Internet Corporation for Assigned Names and Numbers (ICANN) for use by the applications that communicate using the Internet's Transmission Control Protocol (TCP) or the User Datagram Protocol (UDP).
+
+The registered port numbers are in the range from 1024 through 49151.
+
+Dynamic Ports:
+Besides the well-known port numbers and the registered port numbers, the remaining ports in the port number spectrum are referred to as dynamic ports or private ports and are numbered from 49152 through 65535.
+
+
+Port 80 and 443 
+
+
+
+Proxy or Proxy Servers:
+==========================
+A proxy server is basically another computer which serves as a hub through which internet requests are processed. By connecting through one of these servers, your computer sends your requests to the server which then processes your request and returns what you were wanting.
+OR 
+A proxy server is a computer that acts as a gateway between a local network and a larger-scale network such as the Internet.
+Proxy servers provide increased performance and security.
+
+Example: www.hidemyass.com
+         proxy-list.org
+
+Extension :Anonymox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VPN(Virtual Private Network)
+===============================
+A virtual private network, or VPN, extends across a public or shared network, and acts like a tunnel so you can exchange data securely and anonymously across the internet as if you were connected directly to a private network.
+
+Once you connect through a VPN, all your traffic becomes encrypted and your IP (Internet Protocol) address gets replaced with the address of the VPN server. 
+
+pick a quality VPN benefit that does not store information or interchanges logs.
+PR esa kyuuu ????
+
+Eg: Vpngates.com
+    open VPN 
+
+
+Services:
+Online Services : hidemyass
+extension based : hoxx vpn, Anonymox
+Stand Alone Services : Psiphon 
+
+
+DNS (Domain Name System)
+==========================
+The Domain Name System (DNS) is the phonebook of the Internet. 
+google.com ---> google ki ip --> open's google
+
+Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.
+
+How DNS works:
+https://www.youtube.com/watch?v=2ZUxoi7YNgs
+
+
+www.google.com
+
+
+
+OSI Layer
+============
+7 Layers:
+ 
+Sender                                  Receiver
+=======                                 ========
+ 
+7. Application Layer                7. Application Layer
+ 
+6. Presentation Layer               6. Presentation Layer
+ 
+5. Session Layer                    5. Session Layer
+ 
+4. Transport Layer                  4. Transport Layer
+ 
+3. Network Layer                    3. Network Layer
+ 
+2. Data Link Layer                  2. Data Link Layer
+ 
+1. Physical Layer                   1. Physical Layer
+       | 								 |
+       |                                 ^
+       |------------->---->----->--------|
+
+
+Application Layer:
+
+Presentation Layer:
+This layer is usually part of an operating system (OS) and converts incoming and outgoing data from one presentation format to another -- for example, from clear text to encrypted text at one end and back to clear text at the other.
+
+Session Layer:
+This layer sets up, coordinates and terminates conversations. Its services include authentication and reconnection after an interruption.
+
+Transport Layer:
+This layer manages packetization of data, then the delivery of the packets, including checking for errors in the data once it arrives.    (TCP AND UDP)
+-->Segmentation
+-->Connection management
+-->Reliable and unreliable data delivery
+-->Flow control
+-->Connection multiplexing
+
+
+
+Network Layer:
+This layer handles addressing and routing the data -- sending it in the right direction to the right destination on outgoing transmissions and receiving incoming transmissions at the packet level.
+Network layer is responsible for providing logical address known as IP address. Router works on this layer. Main functions of this layer are following:-
+-->Define IP address
+-->Find routes based on IP address to reach its destination
+
+Data link Layer: 
+It forms frames from the packets that are received from network layer and gives it to physical layer.Outgoing messages are assembled into frames.
+--> Defining the Media Access Control (MAC) or hardware addresses
+--> Defining the physical or hardware topology for connections
+--> Defining how the network layer protocol is encapsulated in the data link layer frame
+
+
+Physical Layer:
+Bits me khelna yhan hota hai aapka sb kch 0 and 1 k form me travel krke receiver side jaata hai.
+Everything travels in a network in binary form i.e. 0 and 1 so here the data is converted into its binary form.
+
+
+
+
+TCP/IP Model:
+===============
+4 layers
+ 
+Sender                                  Receiver
+=======                                 ========
+ 
+4. Application Layer                4. Application Layer
+ 
+3. Transport Layer                  3. Transport Layer
+ 
+2. Internet Layer                   2. Internet Layer
+ 
+1. Network Interface                 1. Network Interface 
+
+
+
+OSI -     protocol independent,TL guarantees delivery of packets
+TCP/IP -  based on standard protocol,TL does not
+
+
+
+Web Technology Basics
+=======================
+Domain Name
+Hosting Spaces
+Server
+Client 
+Backend (Database)
+Front end
+Browsers
+
+
+
+09560644011 -- Jyoti ma'am
+
+08960949159  -- Prabhankar Tripathi
+
+09717083319 -- Rahul Tyagi Sir
+
+08558964701 -- Abhijeet Singh Sir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x=x=x==x=x=x=x=x=x=x=x=x=x==x=x=x=x=x=x=x=x=x=x=x=x=x==x=x=x=x=x=x=x=x=x==x=x=x=x=x=x=x=

